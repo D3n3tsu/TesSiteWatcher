@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Start Page";
+}
+
+<div class="">
+    <div class="text-center m-5">
+        <h2 class="m-5">Here you can start to collect online store data</h2>
+        <a asp-action="RunServise" asp-controller="Home" class="btn btn-primary btn-lg" 
+           data-bind="css: { disabled: enabled() }, click: disableButton">
+            Start Collecting Data
+        </a>
+    </div>
+</div>
+<script type="text/javascript">
+    function viewModel() {
+        this.enabled = ko.observable(false);
+        this.disableButton = function () {
+            this.enabled(true);
+            return true;
+        }
+    }
+    ko.applyBindings(viewModel);
+</script>

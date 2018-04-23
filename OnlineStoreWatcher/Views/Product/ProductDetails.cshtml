@@ -1,0 +1,52 @@
+﻿@model ProductDetailsViewModel
+@{
+    ViewBag.Title = "Product Details";
+}
+
+<div>
+    <div class="text-center"><h2>@Model.Name</h2></div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div>
+                <img class="img-thumbnail rounded" src="@Model.ImageBase64" alt="ProductImage" />
+            </div>
+                <div class="alert alert-secondary" role="alert">
+                    Current Price: @Model.Prices.First().Price
+                </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="card">
+                <div class="card-header">
+                    Product description
+                </div>
+                <div class="card-body">
+                    <div class="card-text">@Model.Description</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <h3>Price History</h3>
+        <div class="table-responsive p-3">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th scope="row">Price</th>
+                        @foreach (var price in Model.Prices)
+                    {
+                        <td>@price.Price</td>
+                }
+                    </tr>
+                    <tr>
+                        <th scope="row">Date</th>
+                        @foreach (var price in Model.Prices)
+                    {
+                        <td>@price.Date</td>
+                }
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>

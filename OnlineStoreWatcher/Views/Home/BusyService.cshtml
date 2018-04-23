@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Service is Busy";
+}
+
+<div class="jumbotron">
+    <h1 class="display-4">Service is busy!</h1>
+    <p>
+        Data collecting process is running now. It can take 1-10 seconds per data page collected. Such slow speed is due to artificial constraints placed on code to imitate human interaction with site and to not allow the site to crash under frequent queries.
+    </p>
+    <p class="lead">
+        <a class="btn btn-outline-secondary btn-lg" asp-controller="Home" asp-action="Index" role="button">Update Status</a>
+    </p>
+</div>

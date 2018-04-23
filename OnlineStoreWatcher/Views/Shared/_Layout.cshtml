@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/lib/knockout/knockout-3.4.2.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-info navbar-expand-lg pl-5">
+        <a class="navbar-brand" asp-action="Index" asp-controller="Home">Online Store Watcher</a>
+        <div>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Index" asp-controller="Home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="List" asp-controller="Product">List of products</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>
